@@ -54,7 +54,7 @@ header {
 }
 .brand h1 {
   font-family: 'Press Start 2P', monospace;
-  font-size: .95rem; font-weight: 400;
+  font-size: 1.15rem; font-weight: 400;
   letter-spacing: 0; text-transform: uppercase;
   line-height: 1.6;
   color: #4d9fff;
@@ -150,7 +150,7 @@ main { padding: 16px 16px 96px; max-width: 720px; margin: 0 auto; }
   border-left: 4px solid var(--accent);
   border-radius: var(--radius);
   padding: 12px;
-  height: 130px;              /* tamaño uniforme sin importar el contenido */
+  height: 165px;              /* tamaño uniforme sin importar el contenido */
   overflow: hidden;
   display: flex; flex-direction: column; gap: 6px;
   animation: pop .18s ease;
@@ -313,7 +313,7 @@ a.beat-chip:hover {
   outline: none;
   font-family: inherit;
 }
-.modal textarea { min-height: 160px; resize: vertical; line-height: 1.5; }
+.modal textarea { min-height: 250px; resize: vertical; line-height: 1.5; }
 .modal input:focus, .modal textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 12px rgba(77,159,255,.18);
@@ -325,7 +325,7 @@ a.beat-chip:hover {
   transition: transform .12s ease, box-shadow .12s ease;
 }
 .swatch.selected { border-color: #fff; transform: scale(1.1); }
-.modal .btns { display: flex; justify-content: flex-end; gap: 12px; margin-top: 4px; }
+.modal .btns { display: flex; justify-content: center; gap: 12px; margin-top: 4px; }
 .modal .btns button {
   flex: 0 0 auto; padding: 12px 22px; border-radius: 0;
   font-family: 'Sora', sans-serif;
