@@ -1,0 +1,10 @@
+# Dependencias / sistema
+.firebase/
+*.log
+.DS_Store
+Thumbs.db
+
+# Configuración local de Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
