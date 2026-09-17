@@ -264,14 +264,23 @@ a.beat-chip:hover {
   padding: calc(env(safe-area-inset-top) + 16px) 16px 16px;
 }
 .overlay.open { display: flex; }
+/* El modal de nueva nota ocupa toda la pantalla */
+#overlay { padding: 0; align-items: stretch; justify-content: center; }
+#overlay .modal {
+  max-width: none; max-height: none;
+  width: 100%; height: 100%;
+  border: none; border-radius: 0;
+  padding: 18px;
+}
+#overlay .modal textarea { flex: 1 1 auto; min-height: 340px; }
 .modal {
   background: var(--surface);
   border: 1px solid #22303f;
   border-radius: 22px;
   width: 100%; max-width: 560px;
-  max-height: 84vh; overflow-y: auto;
-  padding: 20px;
-  display: flex; flex-direction: column; gap: 12px;
+  max-height: 92vh; overflow-y: auto;
+  padding: 18px;
+  display: flex; flex-direction: column; gap: 10px;
   animation: slide-up .2s ease;
   box-shadow: 0 0 40px rgba(77,159,255,.1), 0 20px 60px rgba(0,0,0,.6);
 }
@@ -313,21 +322,21 @@ a.beat-chip:hover {
   outline: none;
   font-family: inherit;
 }
-.modal textarea { min-height: 250px; resize: vertical; line-height: 1.5; }
+.modal textarea { min-height: 340px; resize: vertical; line-height: 1.5; }
 .modal input:focus, .modal textarea:focus {
   border-color: var(--accent);
   box-shadow: 0 0 12px rgba(77,159,255,.18);
 }
-.swatches { display: flex; gap: 10px; }
+.swatches { display: flex; gap: 8px; }
 .swatch {
-  width: 34px; height: 34px; border-radius: 50%;
+  width: 26px; height: 26px; border-radius: 50%;
   cursor: pointer; border: 2px solid transparent;
   transition: transform .12s ease, box-shadow .12s ease;
 }
 .swatch.selected { border-color: #fff; transform: scale(1.1); }
-.modal .btns { display: flex; justify-content: center; gap: 12px; margin-top: 4px; }
+.modal .btns { display: flex; justify-content: center; gap: 10px; margin-top: 0; }
 .modal .btns button {
-  flex: 0 0 auto; padding: 12px 22px; border-radius: 0;
+  flex: 0 0 auto; padding: 9px 18px; border-radius: 0;
   font-family: 'Sora', sans-serif;
   font-size: .9rem; font-weight: 700; letter-spacing: .5px;
   border: none; cursor: pointer;
@@ -372,7 +381,7 @@ a.beat-chip:hover {
   margin-bottom: 2px;
 }
 .confirm-modal .hint { font-size: .9rem; }
-.hint { color: var(--text-dim); font-size: .8rem; }
+.hint { color: var(--text-dim); font-size: .72rem; line-height: 1.4; }
 
 /* Login */
 #user-overlay { z-index: 50; align-items: center; justify-content: center; }
